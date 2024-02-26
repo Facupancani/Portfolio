@@ -231,8 +231,14 @@ body{
     border: none;
 }
 
-/*  */
+
+/* max-width: 1280px  */
 @media screen and (max-width: 1280px){
+
+    body{
+        max-width: 1280px;
+        max-height: 720px;
+    }
 
    h1{
     font-size: 40px;
@@ -256,6 +262,8 @@ body{
    .inner-container {
     position: relative;
     left: 25px;
+    z-index: 0;
+    top: -55px;
     display: block;
     max-width: 300px;
    }
