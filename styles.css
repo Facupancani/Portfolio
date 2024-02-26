@@ -257,7 +257,9 @@ body{
    }
 
    .main-container {
+    position: relative;
     max-height: 98vh;
+    top: 40px;
    }
 
    .inner-container {
