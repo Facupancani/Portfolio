@@ -232,8 +232,8 @@ body{
 }
 
 
-/* max-width: 1280px  */
-@media screen and (max-width: 1280px){
+/* 0 to 414 MOVILE  */
+@media screen and (max-width: 800px){
 
     body{
         overflow: scroll;
@@ -268,7 +268,25 @@ body{
     z-index: 0;
     top: -55px;
     display: block;
-    max-width: 300px;
-   }
+    width: 80vw;
+}
 
+}
+
+/* 896 to  */
+@media screen and (min-width: 800px) and (max-width: 1280px){
+    body{
+        overflow: scroll;
+    }
+
+   h1{
+    font-size: 70px;
+   }
+   h2{
+    font-size: 25px;
+   }
+   h3{
+    font-size: 15px;
+   }
+   
 }
