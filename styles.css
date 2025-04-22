@@ -25,7 +25,7 @@ h2{
 }
 h3{
     font-size: var(--tamanio-h3);
-    font-weight: 300; 
+    font-weight: 400; 
 }
 
 .gradient1 {
@@ -70,6 +70,16 @@ body{
     width: 100vw;
     overflow: hidden;
 }
+
+.visual-hook {
+    font-size: 1em;
+    font-weight: bold;
+    background: linear-gradient(-90deg, #f9e57f 50%, #37a55d 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 
 
 
