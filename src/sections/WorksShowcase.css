@@ -1,0 +1,145 @@
+.works {
+  min-height: 100vh;
+}
+.works-wrapper {
+  display: flex;
+}
+
+/* contenedor sticky que ocupa toda la altura visible */
+.works-display__bg {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+/* imágenes de fondo apiladas */
+.item-bg {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: opacity 700ms cubic-bezier(0.22, 0.9, 0.05, 1);
+}
+.item-bg.opacity-0 {
+  opacity: 0;
+  pointer-events: none;
+}
+.item-bg.opacity-100 {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* clase .active se agrega/desactiva desde JS */
+.item-bg.active {
+  opacity: 1;
+}
+.item-bg:not(.active) {
+  opacity: 0;
+}
+
+/* mini-thumbnail */
+.item-thumbnail {
+  width: 360px;
+  overflow: hidden;
+}
+.item-thumbnail-img {
+  display: block;
+  border-radius: 0%;
+  width: 100%;
+  height: 48vh;
+  object-fit: fill;
+  transition: 1.3s ease-in-out;
+  position: relative;
+}
+
+.project-spacer {
+  top: -50vh;
+  position: relative;
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  /*border: 1px solid red*/
+}
+
+/* mejoras de rendimiento */
+.will-change-transform {
+  will-change: transform;
+}
+
+.btn-arrow:hover .btn-arrow__border-wrapper {
+  transform: scaleX(1);
+}
+
+.btn-viewmore {
+  background-color: transparent !important; /* fuerza fondo transparente */
+  border: none !important; /* quita borde */
+  outline: none !important; /* quita outline por defecto */
+}
+.btn-viewmore:hover {
+  border: none !important; /* fuerza que no aparezca border al hover */
+  background-color: transparent !important; /* fuerza que no cambie fondo al hover */
+}
+
+.project-title {
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow-wrap: break-word;
+  font-family: "Neue-Montreal", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  font-size: 4.8rem;
+  text-align: left;
+  line-height: 0.925;
+  color: #e0dfdf;
+  box-sizing: border-box;
+  margin: 0;
+  display: block;
+}
+
+.project-subtitle {
+  -webkit-font-smoothing: antialiased;
+  font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  overflow-wrap: break-word;
+  font-family: "Neue-Montreal", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  font-size: 4rem;
+  text-align: left;
+  line-height: 0.925;
+  color: #e0dfdf;
+  box-sizing: border-box;
+  margin: 0 0 0 1rem;
+  display: block;
+}
+
+.works-list-button {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  text-align: left !important;
+  width: 100% !important;
+  opacity: 0.6;
+  transition: 0.3s ease-in-out;
+}
+
+.works-list-button.active {
+  opacity: 1;
+}
+
+.works-list-button.active .works-list-item {
+  color: #ffffff !important;
+  font-weight: 600; /* para reforzar */
+}
+
+.works-list-item {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}

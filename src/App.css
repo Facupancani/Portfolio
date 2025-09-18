@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/**
+ * This file is for global styles you want to apply to your app.
+ * You can delete this file if you're not using it.
+ *
+ * The styles here will be applied to the entire app, but you can also
+ * add styles directly to components or pages using CSS modules or
+ * styled-components.
+ *
+ * For more information, see:
+ * https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/
+ * https://styled-components.com/docs
+ */
+
+ /*** FUENTES  ***/
+@font-face {
+  font-family: "elza";
+  src: url("/fonts/elza-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "elza";
+  src: url("/fonts/elza-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "elza";
+  src: url("/fonts/elza-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.font-elza {
+  font-family: "elza", sans-serif;
+}
+
+.font-light{
+  --tw-font-weight: var(--font-weight-light);
+  font-weight: var(--font-weight-light);
+}
+
+
+
+
+/*** ESTILOS GENERALES  ***/
+
+#root {
+  width: 100%;
+  margin: 0 0;
+  text-align: center;
+  transition: .3s ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  padding: 2em;
+}
