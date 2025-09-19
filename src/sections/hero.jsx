@@ -6,39 +6,39 @@ export default function Hero() {
   return (
     <section id="home" className="relative w-full min-h-[95vh] flex items-center justify-left overflow-hidden">
       <ParticlesBackground />
-      <div className="relative z-10 max-w-5xl w-full mx-40 px-6 text-left">
+      <div className="relative z-10 max-w-5xl w-full ml-0 lg:ml-40 px-6 text-left">
         <h1
-          className="font-elza font-medium m-0
-          [--headline-hero-font-size:clamp(64px,calc(((100vw-1024px)/896*16)+64px),80px)]
-          lg:[--headline-hero-font-size:clamp(48px,calc(((100vw-360px)/664*16)+48px),64px)]
-          text-[length:var(--headline-hero-font-size)]
-          leading-[1] tracking-normal flex flex-col uppercase h-fit w-fit"
-        >
-          {/* MAKE IT + línea */}
-          <span className="grid font-light grid-cols-[auto_1fr] items-center gap-[24px] max-w-max">
-            <span className="inline-block text-7xl">make it</span>
-            <span className="inline-block w-20 h-1.5 origin-[center_left] bg-blue-400/60">
-              <div className="bg-secondary h-[5px] lg:h-[3px] w-full"></div>
-            </span>
-          </span>
+  className="font-elza font-medium m-0
+  [--headline-hero-font-size:clamp(36px,5vw,80px)]
+  text-[length:var(--headline-hero-font-size)]
+  leading-[1] tracking-normal flex flex-col uppercase h-fit max-w-full break-words"
+>
+  {/* MAKE IT + línea */}
+  <span className="grid font-light grid-cols-[auto_1fr] items-center gap-4 max-w-full">
+    <span className="inline-block">make it</span>
+    <span className="inline-block w-16 sm:w-20 h-1.5 origin-[center_left] bg-blue-400/60">
+      <div className="bg-secondary h-[3px] w-full"></div>
+    </span>
+  </span>
 
-          {/* Texto cambiante con cursor */}
-          <span className="inline-block font-semibold h-[1lh] w-fit mt-4 text-7xl">
-            <TypeAnimation
-              sequence={[
-                "innovative", 2000,
-                "functional", 2000,
-                "easy", 2000,
-                "yours.", 2000,
-              ]}
-              wrapper="span"
-              speed={200}
-              deletionSpeed={180}
-              repeat={Infinity}
-              className="inline-block pr-1"
-            />
-          </span>
-        </h1>
+  {/* Texto cambiante */}
+  <span className="inline-block font-semibold mt-4 text-[length:var(--headline-hero-font-size)] max-w-full break-words">
+    <TypeAnimation
+      sequence={[
+        "innovative", 2000,
+        "functional", 2000,
+        "easy", 2000,
+        "yours.", 2000,
+      ]}
+      wrapper="span"
+      speed={200}
+      deletionSpeed={180}
+      repeat={Infinity}
+      className="inline-block pr-1"
+    />
+  </span>
+</h1>
+
 
         {/* Subtítulo */}
         <p className="mt-6 text-lg text-gray-400 font-elza max-w-2xl">

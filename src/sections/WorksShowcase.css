@@ -1,3 +1,4 @@
+
 .works {
   min-height: 100vh;
 }
@@ -47,7 +48,7 @@
   display: block;
   border-radius: 0%;
   width: 100%;
-  height: 48vh;
+  height: 100%;
   object-fit: fill;
   transition: 1.3s ease-in-out;
   position: relative;
@@ -143,3 +144,94 @@
   text-transform: uppercase;
   font-size: 0.9rem;
 }
+
+.item-picture__thumbnail {
+  position: relative;
+  border-radius: 12px;
+  aspect-ratio: 660/400;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: visible; /* cambiamos overflow hidden a visible */
+}
+
+/* wrapper interno que mantiene el video/iframe dentro del contenedor */
+.item-picture__thumbnail-inner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* recorta solo lo que sea necesario dentro */
+  border-radius: 12px;
+}
+
+/* video o iframe dentro del wrapper */
+.item-picture__thumbnail-inner video,
+.item-picture__thumbnail-inner iframe,
+.item-picture__thumbnail-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+.btn-arrow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Neue-Montreal, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #e0dfdf;
+  width: 100%;
+  padding-block: 0.7rem 0.9rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.btn-arrow span {
+  pointer-events: none; /* evita que corte hover */
+}
+
+.btn-arrow__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  transition: transform 0.3s ease;
+}
+
+/* subrayado animado */
+.btn-arrow__border-wrapper {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ffffff1a;
+  overflow: hidden;
+}
+
+.btn-arrow__border {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: currentColor;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+/* hover effects */
+.btn-arrow:hover {
+  color: #fff;
+}
+
+.btn-arrow:hover .btn-arrow__border {
+  transform: translateX(0);
+}
+
+.btn-arrow:hover .btn-arrow__icon svg {
+  transform: translateX(5px);
+}
+
